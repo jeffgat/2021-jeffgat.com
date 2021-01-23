@@ -3,11 +3,12 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
+import TechImg from '../Image/TechImg';
 import PortfolioContext from '../../context/context';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
-  const { img, paragraphOne, paragraphTwo, paragraphThree, resume } = about;
+  const { img, paragraphOne, paragraphTwo, paragraphThree, resume, techStackImages } = about;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -48,6 +49,28 @@ const About = () => {
                 <p className="about-wrapper__info-text">
                   {paragraphThree || 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.'}
                 </p>
+                <Row>
+                  {techStackImages &&
+                    techStackImages.map((image) => {
+                      return (
+                        <Col sm={2} style={{ margin: '8px', marginTop: '16px' }}>
+                          <Fade bottom duration={1000} delay={600} distance="30px">
+                            <TechImg alt="tech stack logos" filename={image} />
+                            <p
+                              style={{
+                                fontSize: '12px',
+                                textTransform: 'capitalize',
+                                textAlign: 'center',
+                              }}
+                            >
+                              {image.replace('.png', '')}
+                            </p>
+                          </Fade>
+                        </Col>
+                      );
+                    })}
+                </Row>
+
                 {resume && (
                   <span className="d-flex mt-3">
                     <a
