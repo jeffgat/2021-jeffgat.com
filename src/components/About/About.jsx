@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
+import { v4 } from 'uuid';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import TechImg from '../Image/TechImg';
@@ -53,7 +54,7 @@ const About = () => {
                   {techStackImages &&
                     techStackImages.map((image) => {
                       return (
-                        <Col sm={2} style={{ margin: '8px', marginTop: '16px' }}>
+                        <Col sm={2} style={{ margin: '8px', marginTop: '16px' }} key={v4()}>
                           <Fade bottom duration={1000} delay={600} distance="30px">
                             <TechImg alt="tech stack logos" filename={image} />
                             <p

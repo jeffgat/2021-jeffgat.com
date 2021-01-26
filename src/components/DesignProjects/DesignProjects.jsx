@@ -39,7 +39,7 @@ const DesignProjects = () => {
           <Title title="Design" />
           <Row>
             {designProjects.map((project) => {
-              const { title, url, img, id } = project;
+              const { title, img, id } = project;
 
               return (
                 <Col lg={4} sm={4} key={id} style={{ margin: '20px 0 ' }}>
@@ -50,14 +50,18 @@ const DesignProjects = () => {
                     delay={1000}
                     distance="30px"
                   >
-                    <div className="project-wrapper__image">
-                      <a
+                    <div
+                      className="project-wrapper__image"
+                      // onClick={() => console.log('hello')}
+                      style={{ cursor: 'pointer' }}
+                    >
+                      {/* <a
                         href={url || '#!'}
                         target="_blank"
                         aria-label="Project Link"
                         rel="noopener noreferrer"
-                      >
-                        {/* <Tilt
+                      > */}
+                      {/* <Tilt
                           options={{
                             reverse: false,
                             max: 8,
@@ -70,12 +74,12 @@ const DesignProjects = () => {
                             easing: 'cubic-bezier(.03,.98,.52,.99)',
                           }}
                         > */}
-                        <div data-tilt className="thumbnail rounded">
-                          <GradientOverlay />
-                          <DesignImg alt={title} filename={img} />
-                        </div>
-                        {/* </Tilt> */}
-                      </a>
+                      <div data-tilt className="thumbnail rounded">
+                        <GradientOverlay />
+                        <DesignImg alt={title} filename={img} />
+                      </div>
+                      {/* </Tilt> */}
+                      {/* </a> */}
                     </div>
                   </Fade>
                 </Col>

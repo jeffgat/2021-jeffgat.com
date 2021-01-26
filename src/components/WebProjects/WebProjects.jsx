@@ -3,9 +3,10 @@ import Fade from 'react-reveal/Fade';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react';
 import styled from 'styled-components';
+import ReactPlayer from 'react-player/youtube';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
-import ProjectImg from '../Image/ProjectImg';
+// import ProjectImg from '../Image/ProjectImg';
 
 const StyledTab = styled(Tab)`
   color: #333333;
@@ -47,7 +48,6 @@ const WebProjects = () => {
     // console.log(e.currentTarget.tabIndex);
     console.log(e.currentTarget.tabIndex);
   };
-  // isTabActive =
 
   return (
     <section id="projects">
@@ -57,17 +57,17 @@ const WebProjects = () => {
           <Tabs>
             <StyledTabList>
               <StyledTab onClick={handleTabClick}>Cevnn</StyledTab>
+              <StyledTab onClick={handleTabClick}>Cevnn Dashboard</StyledTab>
+              <StyledTab onClick={handleTabClick}>MADD Checkout</StyledTab>
               <StyledTab onClick={handleTabClick}>Reddit Clone</StyledTab>
-              <StyledTab onClick={handleTabClick}>Yahtzee</StyledTab>
             </StyledTabList>
             <TabPanels>
               {webProjects.map((project) => {
-                const { title, info, info2, url, repo, img, id } = project;
-
+                const { title, info, info2, url, repo, id, video } = project;
                 return (
                   <TabPanel key={id}>
-                    <Row>
-                      <Col lg={4} sm={12}>
+                    <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
+                      <Col lg={5} sm={12}>
                         <Fade
                           left={isDesktop}
                           bottom={isMobile}
@@ -109,7 +109,7 @@ const WebProjects = () => {
                           </div>
                         </Fade>
                       </Col>
-                      <Col lg={8} sm={12}>
+                      <Col lg={7} sm={12}>
                         <Fade
                           right={isDesktop}
                           bottom={isMobile}
@@ -117,7 +117,7 @@ const WebProjects = () => {
                           delay={1000}
                           distance="30px"
                         >
-                          <div className="project-wrapper__image">
+                          <div className="project-wrapper__image-web">
                             {/* <a
                               href={url || '#!'}
                               target="_blank"
@@ -138,10 +138,24 @@ const WebProjects = () => {
                                 }}
                               > */}
                             <div data-tilt className="thumbnail rounded">
-                              <ProjectImg
+                              {/* <ProjectImg
                                 alt={title}
                                 filename={img}
-                                style={{ borderRadius: '8px' }}
+                                style={{ borderRadius: '8px', border: 'solid 1px #EDEDEF' }}
+                              /> */}
+                              <ReactPlayer
+                                style={{ backgroundColor: 'white' }}
+                                className="react-player"
+                                url={video}
+                                playing
+                                loop
+                                muted
+                                controls={false}
+                                config={{
+                                  youtube: {
+                                    playerVars: { showinfo: 1 },
+                                  },
+                                }}
                               />
                             </div>
                             {/* </Tilt> */}

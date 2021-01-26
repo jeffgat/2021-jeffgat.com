@@ -42,30 +42,45 @@ export const aboutData = {
 export const webProjectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'cevnn.png',
     title: 'Cevnn',
-    info: '',
+    video: 'https://www.youtube.com/watch?v=HwO5hh0Eygo&feature=youtu.be&ab_channel=JeffGat',
+    info:
+      'Cevnn Payments is a fintech startup that works in the Canadian payment processing space. The goal here was to create a static website that gave us that modern fintech look while telling people what we do.',
+    info2:
+      'As it was just a static website, React was all I used for the code. The design and were creatives created by me, save for two illustrations I licensed to save some time',
+    url: 'https://cevnn.com/',
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'Cevnn Dashboard',
+    video: 'https://www.youtube.com/watch?v=AmSI7wH-EmI&feature=youtu.be&ab_channel=JeffGat',
+    info: 'Cevnn Dashboard',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: '', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'project.jpg',
+    title: 'MADD Checkout Flow',
+    video: 'https://www.youtube.com/watch?v=eqNmZav-h3c&feature=youtu.be&ab_channel=JeffGat',
+    info: 'MADD Donation Flow',
+    info2: '',
+    url: '',
+    repo: '', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'project.jpg',
     title: 'Reddit Clone',
-    info: '',
+    video: 'https://www.youtube.com/watch?v=HwO5hh0Eygo&feature=youtu.be&ab_channel=JeffGat',
+    info: 'Fullstack Reddit Clone',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    repo: 'https://github.com/jeffgat/reddit-clone', // if no repo, the button will not show up
   },
 ];
 // PROJECTS DATA
