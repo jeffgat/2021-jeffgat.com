@@ -45,16 +45,16 @@ const Header = () => {
           <div className="social-links__hero">
             {networks &&
               networks.map((network) => {
-                const { id, Nname, url } = network;
+                const { id, url } = network;
                 return (
                   <a
                     key={id}
                     href={url || 'https://github.com/cobidev/gatsby-simplefolio'}
                     rel="noopener noreferrer"
                     target="_blank"
-                    aria-label={Nname}
+                    aria-label={network.name}
                   >
-                    <i className={`fa fa-${Nname || 'refresh'}`} />
+                    <i className={`fa fa-${network.name || 'refresh'}`} />
                   </a>
                 );
               })}
