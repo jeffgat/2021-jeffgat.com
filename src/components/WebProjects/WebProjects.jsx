@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import ReactPlayer from 'react-player/youtube';
 import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
-// import ProjectImg from '../Image/ProjectImg';
+import ProjectImg from '../Image/ProjectImg';
 
 const StyledTab = styled(Tab)`
   color: #333333;
@@ -59,11 +59,12 @@ const WebProjects = () => {
               <StyledTab onClick={handleTabClick}>Cevnn</StyledTab>
               <StyledTab onClick={handleTabClick}>Cevnn Dashboard</StyledTab>
               <StyledTab onClick={handleTabClick}>MADD Checkout</StyledTab>
+              <StyledTab onClick={handleTabClick}>Creation Crate</StyledTab>
               <StyledTab onClick={handleTabClick}>Reddit Clone</StyledTab>
             </StyledTabList>
             <TabPanels>
               {webProjects.map((project) => {
-                const { title, info, info2, url, repo, id, video } = project;
+                const { title, info, info2, url, repo, id, video, tags, img } = project;
                 return (
                   <TabPanel key={id}>
                     <Row style={{ alignItems: 'center', justifyContent: 'center' }}>
@@ -79,6 +80,15 @@ const WebProjects = () => {
                             <h3 className="project-wrapper__text-title">
                               {title || 'Project Title'}
                             </h3>
+                            <div className="project__tag-wrapper">
+                              {tags.map((tag) => {
+                                return (
+                                  <>
+                                    <span className="project__tag">#{tag}</span>
+                                  </>
+                                );
+                              })}
+                            </div>
                             <div>
                               <p>
                                 {info ||
@@ -86,14 +96,16 @@ const WebProjects = () => {
                               </p>
                               <p className="mb-4">{info2 || ''}</p>
                             </div>
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="cta-btn cta-btn--hero"
-                              href={url || '#!'}
-                            >
-                              See Live
-                            </a>
+                            {url && (
+                              <a
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="cta-btn cta-btn--hero"
+                                href={url || '#!'}
+                              >
+                                See Live
+                              </a>
+                            )}
 
                             {repo && (
                               <a
@@ -118,48 +130,33 @@ const WebProjects = () => {
                           distance="30px"
                         >
                           <div className="project-wrapper__image-web">
-                            {/* <a
-                              href={url || '#!'}
-                              target="_blank"
-                              aria-label="Project Link"
-                              rel="noopener noreferrer"
-                            > */}
-                            {/* <Tilt
-                                options={{
-                                  reverse: false,
-                                  max: 4,
-                                  perspective: 1000,
-                                  scale: 1,
-                                  speed: 300,
-                                  transition: true,
-                                  axis: null,
-                                  reset: true,
-                                  easing: 'cubic-bezier(.03,.98,.52,.99)',
-                                }}
-                              > */}
                             <div data-tilt className="thumbnail rounded">
-                              {/* <ProjectImg
-                                alt={title}
-                                filename={img}
-                                style={{ borderRadius: '8px', border: 'solid 1px #EDEDEF' }}
-                              /> */}
-                              <ReactPlayer
-                                style={{ backgroundColor: 'white' }}
-                                className="react-player"
-                                url={video}
-                                playing
-                                loop
-                                muted
-                                controls={false}
-                                config={{
-                                  youtube: {
-                                    playerVars: { showinfo: 1 },
-                                  },
-                                }}
-                              />
+                              {img && (
+                                <div className="border__gray">
+                                  <ProjectImg
+                                    alt={title}
+                                    filename={img}
+                                    style={{ borderRadius: '8px', border: 'solid 1px #EDEDEF' }}
+                                  />
+                                </div>
+                              )}
+                              {video && (
+                                <ReactPlayer
+                                  style={{ backgroundColor: 'white' }}
+                                  className="react-player"
+                                  url={video}
+                                  playing
+                                  loop
+                                  muted
+                                  controls={false}
+                                  config={{
+                                    youtube: {
+                                      playerVars: { showinfo: 1 },
+                                    },
+                                  }}
+                                />
+                              )}
                             </div>
-                            {/* </Tilt> */}
-                            {/* </a> */}
                           </div>
                         </Fade>
                       </Col>

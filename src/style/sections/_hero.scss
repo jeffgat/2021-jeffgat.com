@@ -46,7 +46,31 @@
       font-size: 2.8rem;
     }
   }
+  .social-links__hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: $primary-color;
+    position: absolute;
+    top: 0;
+    right: 0;
 
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $primary-color;
+      font-size: 3rem;
+      margin: 0.5rem;
+      width: 5rem;
+      height: 5rem;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        transform: translateY(-2px);
+      }
+    }
+  }
   .hero-cta {
     display: flex;
 

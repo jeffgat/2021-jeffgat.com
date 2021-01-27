@@ -53,7 +53,6 @@ const DesignProjects = () => {
                     <div
                       className="project-wrapper__image"
                       // onClick={() => console.log('hello')}
-                      style={{ cursor: 'pointer' }}
                     >
                       {/* <a
                         href={url || '#!'}

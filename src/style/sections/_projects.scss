@@ -13,6 +13,22 @@
     border-radius: 8px;
   }
 
+  .project__tag {
+    font-size: 14px;
+    border-radius: 50px;
+    background-color: #ededef;
+    padding: 4px 12px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+
+    &-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+  .border__gray {
+    border: solid 1px #ededef;
+  }
   .project-wrapper {
     margin-bottom: 15rem;
 
@@ -56,7 +72,6 @@
     &__image {
       width: 90%;
       margin: 0 auto;
-
 
       @include respond(tab-land) {
         width: 100%;

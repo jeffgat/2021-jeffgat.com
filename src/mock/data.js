@@ -9,7 +9,7 @@ export const headData = {
 
 // HERO DATA
 export const heroData = {
-  title: 'Hi, my name is',
+  title: 'Hey, my name is',
   name: 'Jeff Gatbonton',
   subtitle: "I'm a Fullstack Developer and Designer",
   cta: 'Learn More',
@@ -43,66 +43,70 @@ export const webProjectsData = [
   {
     id: nanoid(),
     img: 'cevnn.png',
-    title: 'Cevnn',
-    video: 'https://www.youtube.com/watch?v=HwO5hh0Eygo&feature=youtu.be&ab_channel=JeffGat',
+    title: 'Cevnn Website',
+    video: '',
     info:
       'Cevnn Payments is a fintech startup that works in the Canadian payment processing space. The goal here was to create a static website that gave us that modern fintech look while telling people what we do.',
-    info2:
-      'As it was just a static website, React was all I used for the code. The design and were creatives created by me, save for two illustrations I licensed to save some time',
+    info2: 'Built with Javascript and React',
     url: 'https://cevnn.com/',
     repo: '', // if no repo, the button will not show up
+    tags: ['javascript', 'react'],
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: '',
     title: 'Cevnn Dashboard',
     video: 'https://www.youtube.com/watch?v=AmSI7wH-EmI&feature=youtu.be&ab_channel=JeffGat',
-    info: 'Cevnn Dashboard',
-    info2: '',
+    info:
+      "This project was a client facing dashboard, showing various analytics and charts for the merchant's payments.",
+    info2:
+      'Built with Typescript and React, while the back-end was a REST API written in PHP and a MySQL database.',
     url: '',
     repo: '', // if no repo, the button will not show up
+    tags: ['typescript', 'react', 'mysql', 'php', 'docker'],
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: '',
     title: 'MADD Checkout Flow',
     video: 'https://www.youtube.com/watch?v=eqNmZav-h3c&feature=youtu.be&ab_channel=JeffGat',
-    info: 'MADD Donation Flow',
-    info2: '',
+    info:
+      'This was a custom, mobile-first checkout flow for MADD (Mothers Against Drunk Driving) Canada to process donations via scanning a QR code.',
+    info2:
+      'Built with Typescript and React, while the back-end was a REST API written in PHP and a MySQL database.',
     url: '',
     repo: '', // if no repo, the button will not show up
+    tags: ['javascript', 'react', 'mysql', 'php', 'docker'],
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
+    img: 'creation-crate.png',
+    title: 'Creation Crate',
+    video: '',
+    info:
+      'Creation Crate is a subscription box focused on programming with hardware. This is a standard e-commerce website, hosted on a platform called Cratejoy.',
+    info2:
+      "Built with vanilla Javascript, HTML, and CSS. Some jQuery, and working with Cratejoy's theming logic which uses Jinja, a Python templating language.",
+    url: 'https://creation-crate.com/',
+    repo: '', // if no repo, the button will not show up
+    tags: ['javascript', 'jquery', 'python', 'jinja'],
+  },
+  {
+    id: nanoid(),
+    img: 'reddit-clone.png',
     title: 'Reddit Clone',
-    video: 'https://www.youtube.com/watch?v=HwO5hh0Eygo&feature=youtu.be&ab_channel=JeffGat',
-    info: 'Fullstack Reddit Clone',
-    info2: '',
-    url: '',
+    video: '',
+    info:
+      'This project was a practice project to explore and get more comfortable with some tech that I really enjoy using. It\'s a very simplified "reddit" or forum web app.',
+    info2:
+      'Built with Typescript, React, Graphql, Redis, PostgreSQL, and Node JS. The front-end is hosted on Vercel, and the back-end graphql API on Digital Ocean.',
+    url: 'https://jeff-apps.com/',
     repo: 'https://github.com/jeffgat/reddit-clone', // if no repo, the button will not show up
+    tags: ['typescript', 'react', 'graphql', 'redis', 'postgres', 'node', 'docker'],
   },
 ];
 // PROJECTS DATA
 export const designProjectsData = [
-  {
-    id: nanoid(),
-    img: 'illustration-1.png',
-    title: 'design 1',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'illustration-2.png',
-    title: 'design 1',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
   {
     id: nanoid(),
     img: 'illustration-3.png',
@@ -110,43 +114,30 @@ export const designProjectsData = [
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'sticker-2.png',
-    title: 'design 1',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'sticker-3.png',
-    title: 'design 2',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
-  },
-  {
-    id: nanoid(),
-    img: 'sticker-4.png',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
     img: 'icons-1.png',
+    title: '',
+    info: '',
+    info2: '',
+    url: '',
+  },
+  {
+    id: nanoid(),
+    img: 'logo-3.png',
     title: 'design 1',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+  },
+  {
+    id: nanoid(),
+    img: 'illustration-1.png',
+    title: 'design 1',
+    info: '',
+    info2: '',
+    url: '',
   },
   {
     id: nanoid(),
@@ -155,22 +146,20 @@ export const designProjectsData = [
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
   {
     id: nanoid(),
-    img: 'logo-1.png',
+    img: 'logo-2.png',
     title: 'design 1',
     info: '',
     info2: '',
     url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
   },
 ];
 
 // CONTACT DATA
 export const contactData = {
-  cta: 'Shoot me an email',
+  cta: 'Reply time: within 1-2 working days',
   btn: 'jeff.gtbn@gmail.com',
   email: 'jeff.gtbn@gmail.com',
 };
@@ -180,6 +169,11 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
+      name: 'github',
+      url: 'https://github.com/jeffgat',
+    },
+    {
+      id: nanoid(),
       name: 'dribbble',
       url: 'https://dribbble.com/jeffgat',
     },
@@ -187,11 +181,6 @@ export const footerData = {
       id: nanoid(),
       name: 'linkedin',
       url: 'https://www.linkedin.com/in/jeff-gatbonton/',
-    },
-    {
-      id: nanoid(),
-      name: 'github',
-      url: 'https://github.com/jeffgat',
     },
   ],
 };
